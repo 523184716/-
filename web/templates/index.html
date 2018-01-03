@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>日志查看系统</title>
+    <link type="text/css" rel="stylesheet" href="../static/css/base.css" >
+    <link type="text/css" rel="stylesheet" href="../static/bootstrap/dist/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="../static/css/index.css" >
+</head>
+<body>
+    <div class="pgbody-header-frame">
+        <div class="pgbody-header">
+            <div class="header1">logo</div>
+            <div class="header2">首页</div>
+            <div class="header3">资产列表</div>
+            <div class="header4">故障信息</div>
+            <div class="header5">报表</div>
+            <div class="header6">日志</div>
+            <div class="header7">登录/注销</div>
+        </div>
+    </div>
+    <div class="pgbody-content-frame">
+        <div class="pgbody-content">
+            <div class="pgbody-left">
+                <div class="pg-l-header">大的服务分类项
+                    <div class="cm" id="fw1" >cm服务器
+                        <ul >
+                            <li>cm1</li>
+                            <li>cm1</li>
+                            <li>cm1</li>
+                            <li>cm1</li>
+                        </ul>
+                    </div>
+                    <div class="wf" id="fw2">wf服务器
+                        <ul>
+                            <li>wf1</li>
+                            <li>wf2</li>
+                            <li>wf3</li>
+                            <li>wf4</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>大的服务分类项
+                    <div class="edi" id="fw3">edi服务器
+                        <ul>
+                            <li>wf1</li>
+                            <li>wf2</li>
+                            <li>wf3</li>
+                            <li>wf4</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>大的服务分类项</div>
+            </div>
+            <div class="pgbody-right">
+                <div class="search">
+                    <div  class="time" id="getdate">
+                        起始：<input type="datetime-local">
+                        结束：<input type="datetime-local">
+                    </div>
+                    <div class="keyvalue">
+                        <input name="key" id="keyname">
+                        <input type="submit" value="搜索" id="logsearch">
+                    </div>
+                </div>
+                <div class="data-display" id="display">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../static/js/jquery1.12.4.min.js"></script>
+    <script src="../static/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $('#logsearch').click(function () {
+            var startdate = $('#getdate input').eq(0).val()
+            var enddate = $('#getdate input').eq(1).val()
+            var keyvalue = $('#keyname').val()
+            if (! startdate){
+                alert ("请填写起始日期")
+            }
+            if (! enddate) {
+                alert ("请填写结束日期")
+            }
+            if (! keyvalue) {
+                alert ("请填写搜索关键字")
+            }
+            $.ajax({
+                type:"POST",
+                url:"/search",
+                data:{
+                    "startdate":startdate,
+                    "enddate":enddate,
+                    "service":"cm1",
+                    "keyvalue":keyvalue
+                },
+                success:function (args,status) {
+                    console.log(args)
+                    $('#display').html("")
+                    $('#display').html(args)
+                }
+            })
+        })
+
+        for (var i=1;i<4;i++) {
+            var clickid1 = "'"+'#fw'+i+"'";
+            console.log(clickid1)
+            switch (clickid1){
+                case ("'#fw1'"):
+                    $('#fw1').click(function () {
+//                        toggleClass可以直接加类，如若已存在则删除，若没有咋添加这个类，同时参数可以接收函数，函数里面设置return返回值即可
+//                        $('#fw1 ul').toggleClass("left-data-disply")
+//                        toggle 主要是做显示和隐藏，show() 和hide的效果，这方面比toggleClass方便
+                        $('#fw1 ul').toggle();
+                    })
+                    break;
+                case ("'#fw2'"):
+                    $('#fw2').click(function () {
+//                        $('#fw2 ul').toggleClass("left-data-disply")
+                        $('#fw2 ul').toggle();
+                    })
+                    break;
+                case ("'#fw3'"):
+                    $('#fw3').click(function () {
+//                        $('#fw3 ul').toggleClass("left-data-disply")
+                        $('#fw3 ul').toggle();
+                    })
+                    break;
+            }
+        }
+
+//        $('.pgbody-left').mouseover(function () {
+//            $('.pgbody-left').show()
+//        })
+//        $('.pgbody-left').mouseout(function () {
+//            $('.pgbody-left').hide(1000)
+//        })
+
+    </script>
+</body>
+</html>

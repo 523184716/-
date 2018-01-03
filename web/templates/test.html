@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <link type="text/css" rel="stylesheet" href="../static/bootstrap/dist/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="../static/css/index.css">
+    <link type="text/css" rel="stylesheet" href="test.css">
+</head>
+<body>
+    <!--nav 导航栏标志navbar-fixed-top 居顶-->
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+        <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img src="../../../html_module/image/logo_osc.png" alt="Brand" class="img">
+                </a>
+            </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav pghead ">
+                    <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                    <li><a href="#">Link</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right pghead">
+                    <li><a href="#">Link</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+    <!--轮播图，如果没有外层的三个栅格控制的话是全宽的，有的话就是居中下面两个a标签控制滚动选择条-->
+    <!--<div class="container-fluid">-->
+        <!--<div class="row-fluid">-->
+            <!--<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">-->
+    <div class="carousel slide mycarousel" id="carousel-example-generic">
+        <ol class="carousel-indicators">
+            <li class="active" data-slide-to="0" data-target="#carousel-example-generic">
+            </li>
+            <li data-slide-to="1" data-target="#carousel-example-generic">
+            </li>
+            <li data-slide-to="2" data-target="#carousel-example-generic">
+            </li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img alt="" src="../../../html_module/image/jd/ppt1.jpg" />
+                <div class="carousel-caption">
+                    <h4>
+                        棒球
+                    </h4>
+                    <p>
+                        棒球运动是一种以棒打球为主要特点，集体性、对抗性很强的球类运动项目，在美国、日本尤为盛行。
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img alt="" src="../../../html_module/image/jd/ppt3.jpg" />
+                <div class="carousel-caption">
+                    <h4>
+                        冲浪
+                    </h4>
+                    <p>
+                        冲浪是以海浪为动力，利用自身的高超技巧和平衡能力，搏击海浪的一项运动。运动员站立在冲浪板上，或利用腹板、跪板、充气的橡皮垫、划艇、皮艇等驾驭海浪的一项水上运动。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <div class="container">
+        <div class="row">
+           <img src="../../../html_module/image/jd/app-web.png" class="img-responsive" alt="Responsive image">
+          <!--必须在一个新的类名里面同时调用bootstrap的类名-->
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-6 col-lg-6">
+                <img src="../../../html_module/image/jd/kv-nitro-desktop-cn-r-q100-m111111.jpg" class="img-responsive">
+            </div>
+            <div class="col-md-6 col-sm-6 lengc-text">
+                <h3>气质冷萃咖啡</h3>
+                <p>用特别的加工方式 赋予冷萃咖啡绵密的泡沫 如天鹅搬丝滑</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+                <img src="../../../html_module/image/jd/kv-nitro-desktop-cn-r-q100-m111111.jpg" class="img-responsive ">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 col-sm-3 clearfix visible-xs-block">.col-xs-6 .col-sm-3Resize your viewport or check it out on your phone for an example.</div>
+            <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+
+            <!-- Add the extra clearfix for only the required viewport -->
+            <div class="clearfix visible-xs-block"></div>
+
+            <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+            <div class="col-xs-6 col-sm-3">.col-xs-6 .col-sm-3</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 has-success">
+                        <ul class="list-unstyled">
+                            <li class="nav-header has-success">
+                                列表标题
+                            </li>
+                            <li class="active">
+                                <a href="#">首页</a>
+                            </li>
+                            <li>
+                                <a href="#">库</a>
+                            </li>
+                            <li>
+                                <a href="#">应用</a>
+                            </li>
+                            <li class="nav-header">
+                                功能列表
+                            </li>
+                            <li>
+                                <a href="#">资料</a>
+                            </li>
+                            <li>
+                                <a href="#">设置</a>
+                            </li>
+                            <li class="divider">
+                            </li>
+                            <li>
+                                <a href="#">帮助</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <ul class="list-unstyled ">
+                            <li class="nav-header">
+                                列表标题
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li role="presentation" class="active"><a href="#">Home</a></li>
+                                    <li role="presentation"><a href="#">Profile</a></li>
+                                    <li role="presentation"><a href="#">Messages</a></li>
+                                </ul>
+                                <ul class="list-unstyled">
+                                   <li class="active">
+                                        <a href="#">首页</a>
+                                    </li>
+                                    <li >
+                                        <a href="#">库</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">应用</a>
+                                    </li>
+                                    <li class="nav-header">
+                                        功能列表
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="active">
+                                <a href="#">首页</a>
+                            </li>
+                            <li >
+                                <a href="#">库</a>
+                            </li>
+                            <li>
+                                <a href="#">应用</a>
+                            </li>
+                            <li class="nav-header">
+                                功能列表
+                            </li>
+                            <li>
+                                <a href="#">资料</a>
+                            </li>
+                            <li>
+                                <a href="#">设置</a>
+                            </li>
+                            <li class="divider">
+                            </li>
+                            <li>
+                                <a href="#">帮助</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+
+            </div>
+        </div>
+    </div>
+    <div class="form-group has-success">
+        <label class="control-label" for="inputSuccess1">Input with success</label>
+        <input type="text" class="form-control" id="inputSuccess1" aria-describedby="helpBlock2">
+        <span id="helpBlock2" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+    </div>
+    <div class="form-group has-warning">
+        <label class="control-label" for="inputWarning1">Input with warning</label>
+        <input type="text" class="form-control" id="inputWarning1">
+    </div>
+    <div class="form-group has-error">
+        <label class="control-label" for="inputError1">Input with error</label>
+        <input type="text" class="form-control" id="inputError1">
+    </div>
+    <div class="has-success">
+        <div class="checkbox">下
+            <label>
+                <input type="checkbox" id="checkboxSuccess" value="option1">
+                Checkbox with success
+            </label>
+        </div>
+    </div>
+    <div class="has-warning">
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" id="checkboxWarning" value="option1">
+                Checkbox with warning
+            </label>
+        </div>
+    </div>
+    <div class="has-error">
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" id="checkboxError" value="option1">
+                Checkbox with error
+            </label>
+        </div>
+    </div>
+    <div class="has-success">
+        <label class="control-label" for="inputSuccess1">Input with success</label>
+    </div>
+    <form class="form-horizontal">
+        <div class="form-group has-success has-feedback">
+            <label class="control-label col-sm-3 input-group-lg" for="inputSuccess3">Input with success</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control input-group-lg" id="inputSuccess3" aria-describedby="inputSuccess3Status">
+                <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+                <span id="inputSuccess3Status" class="sr-only">(success)</span>
+            </div>
+        </div>
+        <div class="form-group has-success has-feedback form-group-lg">
+            <label class="control-label col-sm-3" for="inputGroupSuccess2">Input group with success</label>
+            <div class="col-sm-9">
+                <div class="input-group">
+                    <span class="input-group-addon input-group-lg">@</span>
+                    <input type="text" class="form-control " id="inputGroupSuccess2" aria-describedby="inputGroupSuccess2Status">
+                </div>
+                <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+                <span id="inputGroupSuccess2Status" class="sr-only">(success)</span>
+            </div>
+        </div>
+    </form>
+    <input class="form-control input-lg" type="text" placeholder=".input-lg">
+    <input class="form-control" type="text" placeholder="Default input">
+    <input class="form-control input-sm" type="text" placeholder=".input-sm">
+
+    <select class="form-control input-lg">...
+        <option>1</option>
+        <option>2</option>
+    </select>
+
+    <select class="form-control">...</select>
+    <select class="form-control input-sm">...</select>
+    <button type="button" class="btn btn-primary btn-lg btn-block">（首选项）Primary</button>
+    <button type="button" class="btn btn-primary btn-lg ">Primary</button>
+    <img src="../../../html_module/image/jd/favicon.ico" alt="..." class="img-rounded">
+    <img src="../../../html_module/image/jd/show.png" alt="..." class="img-circle">
+    <img src="../../../html_module/image/jd/capslock.png" alt="..." class="img-thumbnail">
+    <!--<button type="button" class="btn btn-default" aria-label="Left Align">-->
+        <!--<span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>-->
+    <!--</button>-->
+
+    <button type="button" class="btn btn-default btn-lg">
+        <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Star
+    </button>
+    <div class="btn-toolbar" role="toolbar" aria-label="...">
+        <div class="btn-group" role="group" aria-label="...">
+            <button type="button" class="btn btn-default">上一页</button>
+        </div>
+        <div class="btn-group" role="group" aria-label="...">
+            <button type="button" class="btn btn-default">1</button>
+            <button type="button" class="btn btn-default">2</button>
+            <button type="button" class="btn btn-default">3</button>
+        </div>
+        <div class="btn-group" role="group" aria-label="...">...</div>
+        <div class="btn-group" role="group" aria-label="...">
+            <button type="button" class="btn btn-default">5</button>
+            <button type="button" class="btn btn-default">6</button>
+        </div>
+        <div class="btn-group" role="group" aria-label="...">
+            <button type="button" class="btn btn-default">下一页</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="input-group">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">Go!</button>
+                </span>
+                <input type="text" class="form-control" placeholder="Search for...">
+            </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+        <div class="col-lg-6">
+            <div class="input-group input-sm">
+                <input type="file" class="form-control " placeholder="Search for...">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">搜索</button>
+                </span>
+            </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+    </div><!-- /.row -->
+    <form class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+            <input type="file" class="form-control uploadfile" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">上传</button>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+    <<canvas id="myChart" width="400" height="400"></canvas>
+    <script src="../static/js/jquery1.12.4.min.js"></script>
+    <script src="../static/js/chart.js"></script>
+    <script src="http://cdn.bootcss.com/Chart.js/2.4.0/Chart.js"></script>
+    <script type="text/javascript">
+//        var ctx = document.getElementById("myChart").getContext("2d");
+//        var myChart = new Chart(ctx, {
+//            type: 'bar',
+//            data: {
+//                labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+//                datasets: [{
+//                    label: '# of Votes',
+//                    data: [12, 19, 3, 5, 2, 3],
+//                    backgroundColor: [
+//                        'rgba(255, 99, 132, 0.2)',
+//                        'rgba(54, 162, 235, 0.2)',
+//                        'rgba(255, 206, 86, 0.2)',
+//                        'rgba(75, 192, 192, 0.2)',
+//                        'rgba(153, 102, 255, 0.2)',
+//                        'rgba(255, 159, 64, 0.2)'
+//                    ],
+//                    borderColor: [
+//                        'rgba(255,99,132,1)',
+//                        'rgba(54, 162, 235, 1)',
+//                        'rgba(255, 206, 86, 1)',
+//                        'rgba(75, 192, 192, 1)',
+//                        'rgba(153, 102, 255, 1)',
+//                        'rgba(255, 159, 64, 1)'
+//                    ],
+//                    borderWidth: 1
+//                }]
+//            },
+//                options: {
+//                    scales: {
+//                        yAxes: [{
+//                            ticks: {
+//                                beginAtZero:true
+//                            }
+//                        }]
+//                    }
+//                }
+//            });
+
+//        方式一：
+    var ctx = document.getElementById("myChart").getContext("2d");;
+    var MyNewChart =  Chart.Line(ctx,{
+        data:data
+    }) //这种方式是只加载数据集，（缺省options）不修改默认参数（简称法一）
+
+    //数据结构（数据参数设置）
+    var data = {
+        //折线图需要为每个数据点设置一标签。这是显示在X轴上。
+        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        //数据集（y轴数据范围随数据集合中的data中的最大或最小数据而动态改变的）
+        datasets: [{
+                    fillColor: "rgba(220,220,220,0.5)", //背景填充色
+                    strokeColor: "rgba(220,220,220,1)", //路径颜色
+                    pointColor: "rgba(220,220,220,1)", //数据点颜色
+                    pointStrokeColor: "#fff", //数据点边框颜色
+                    data: [10, 59, 90, 81, 56, 55, 40] //对象数据
+                }, {
+                    fillColor: "rgba(151,187,205,0.5)",
+                    strokeColor: "rgba(151,187,205,1)",
+                    pointColor: "rgba(151,187,205,1)",
+                    pointStrokeColor: "#fff",
+                    data: [28, 48, 40, 19, 96, 27, 200]
+                }]
+            };
+        Line.defaults = {
+                //网格线是否在数据线的上面
+                scaleOverlay : false,
+
+                //是否用硬编码重写y轴网格线
+                scaleOverride : false,
+
+                //** Required if scaleOverride is true **
+                //y轴刻度的个数
+                scaleSteps : null,
+
+                //y轴每个刻度的宽度
+                scaleStepWidth : 20,
+
+                // Y 轴的起始值
+                scaleStartValue : null,
+                // Y/X轴的颜色
+                scaleLineColor: "rgba(0,0,0,.1)",
+                // X,Y轴的宽度
+                scaleLineWidth: 1,
+                // 刻度是否显示标签, 即Y轴上是否显示文字
+                scaleShowLabels: true,
+                // Y轴上的刻度,即文字
+                scaleLabel: "<%=value%>",
+                // 字体
+                scaleFontFamily: "'Arial'",
+                // 文字大小
+                scaleFontSize: 16,
+                // 文字样式
+                scaleFontStyle: "normal",
+                // 文字颜色
+                scaleFontColor: "#666",
+                // 是否显示网格
+                scaleShowGridLines: true,
+                // 网格颜色
+                scaleGridLineColor: "rgba(0,0,0,.05)",
+                // 网格宽度
+                scaleGridLineWidth:2,
+                // 是否使用贝塞尔曲线? 即:线条是否弯曲
+                bezierCurve: true,
+                // 是否显示点数
+                pointDot: true,
+                // 圆点的大小
+                pointDotRadius:5,
+                // 圆点的笔触宽度, 即:圆点外层白色大小
+                pointDotStrokeWidth: 2,
+                // 数据集行程(连线路径)
+                datasetStroke: true,
+                // 线条的宽度, 即:数据集
+                datasetStrokeWidth: 2,
+                // 是否填充数据集
+                datasetFill: true,
+                // 是否执行动画
+                animation: true,
+                // 动画的时间
+                animationSteps: 60,
+                // 动画的特效
+                animationEasing: "easeOutQuart",
+                // 动画完成时的执行函数
+                /*onAnimationComplete: null*/
+            }
+    </script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>特效</title>
+    <style>
+        #test {
+            width: 100px;
+            height: 100px;
+            border: 1px solid pink;
+            background-color: #006699;
+            transform:rotateX(-45deg) rotateY(-45deg) rotateZ(-45deg);
+            /*position: absolute;*/
+        }
+        body {
+            margin: 0 0;
+            padding: 0;
+        }
+       .pgbody-frame {
+           width: 100%;
+           height: 500px;
+       }
+        .register {
+            width: 500px;
+            height: 400px;
+            border: 1px solid pink;
+            margin: 0 auto;
+        }
+        /*span {*/
+            /*display: block;*/
+            /*text-align: center;*/
+        /*}*/
+        input {
+            /*display: block;*/
+            line-height: 26px;
+            /*text-align: center;*/
+            margin: 5px auto;
+        }
+        .register div {
+            text-align: center;
+            margin: 5px auto;
+            padding: 5px auto;
+            line-height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <button>变换</button>
+    <div id="test"></div>
+    <div class="pgbody">
+        <div class="pgbody-frame">
+            <div class="register">
+                <div><sapn>个人用户注册</sapn><br/></div>
+                <div>&nbsp;&nbsp;&nbsp;用户名：<input type="text" name="username" id="user"/><br></div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;密码：<input type="password" name="password"/><br></div>
+                <div>确认密码：<input type="password" /><br></div>
+                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;邮箱：<input type="email" /><br></div>
+                <div>手机号码：<input type="text" /><br></div>
+                <div>&nbsp;&nbsp;&nbsp;随机数：<input type="text" /><input type="image" id="yanzhengma"/><br></div>
+                <div><input type="submit" value="免费注册"/></div>
+            </div>
+        </div>
+    </div>
+
+    <script  src="../static/js/jquery.min.js"></script>
+    <script TYPE="text/javascript">
+//        $('button').click(function () {
+//            $('#test').toggle()
+//            $('#test').show(2000,function () {
+//                $('#test').hide(2000)
+//            })
+//
+//        })
+        $('button').click(function () {
+           $('#test').css('position','absolute');
+           $('#test').animate({
+               'width':'300px','height':'300px','top':'400px','left':'400px'
+           },2000,function () {
+               $('#test').css('positon','');
+               $('#test').animate({
+                   'width':'100px','height':'100px','margin-top': '10px '
+                   },3000,function () {
+                   $('#test').hide();
+               })
+           })
+        })
+        var numarray = [];
+        var img;  //生成的图片变量
+        var num=Math.floor(Math.random()*10);
+        function bijiao(array,num){
+            for(i=0;i<array.length;i++){
+                if(array[i]==num){
+                    return false;
+                }
+            }
+        }
+        function pic(){
+            if(!bijiao(numarray,num)){
+                img="sephora"+num+".jpg";
+
+                numarray.push(num);
+            }else{
+                num=Math.floor(Math.random()*10);
+                pic(array,num);
+            }
+        }
+        pic()
+        $("#yanzhengma").val(img)
+        $('#user').blur(function () {
+//            alert ("11")
+            var reg1 = /^\d{6,20}$/;
+            var username = $('#user').val();
+            if (username.length < 6 || username.length > 16){
+//                alert("333")
+                $('#user').parent().after('<span style="color: red;display:block;text-align: center;font-size: 10px">请输入6-16位的字母数字下划线的结合</span>')
+            }
+
+            else {
+                if (reg1.test(username)) {
+                    $('#user').parent().after('<span style="color:red;display: block;text-align: center;font-size: 10px">用户名不允许是全数字</span>')
+                }
+                else {
+                    $('#user').parent().after('<span style="color:green;display: block;text-align: center;font-size: 10px">恭喜你,用户名可用</span>')
+                }
+            }
+        })
+        $('#user').focus(function () {
+            $('#user').parent().next().remove("span")
+        })
+
+    </script>
+</body>
+</html>

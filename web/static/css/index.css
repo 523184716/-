@@ -1,0 +1,120 @@
+.imgcolor {
+    color: green;
+}
+
+.pgbody-header-frame {
+    width: 100%;
+    height: 50px;
+    /*border: 1px solid red;*/
+    background-color: green;
+}
+
+.pgbody-header {
+    width: 999px;
+    height: 50px;
+    /*border: 1px solid green;*/
+    margin: 0 auto;
+}
+
+.pgbody-header .header1,.header2,.header3,.header4,.header5,.header6 {
+    float: left;
+    /*vertical-align: middle;*/
+    margin: 15px 10px 0 50px;
+}
+.pgbody-header .header7 {
+    float: right;
+    margin: 15px 50px 0 0;
+}
+
+.pgbody-content-frame {
+    width: 100%;
+    height: 655px;
+    background-color: #9c9c9c;
+}
+
+.pgbody-content {
+    width: 999px;
+    height: 655px;
+    margin: 0 auto;
+}
+.pgbody-left {
+    position: fixed;
+    width: 10%;
+    height: 655px;
+    background-color: cornflowerblue;
+    float: left;
+}
+
+.pgbody-right {
+    width: 90%;
+    height: 100%;
+    background-color: #0D3349;
+    /*border: 2px solid red;*/
+    float: right;
+
+}
+
+.search {
+    width: 80%;
+    height: 40px;
+    /*border: 1px solid red;*/
+    margin:  10px auto 0;
+}
+.time {
+    width: auto;
+    height: 40px;
+    float: left;
+    margin-left: 30px;
+    /*border: 1px solid red;*/
+    color: white;
+
+}
+.keyvalue {
+    width: 150px;
+    height: 40px;
+    float: right;
+    /*border: 1px solid red;*/
+    color: white;
+}
+#keyname {
+    width: 100px;
+    color: black;
+}
+#logsearch {
+    background-color: #006699;
+}
+
+.data-display {
+    width: 80%;
+    height:90% ;
+    margin: 0 auto ;
+    background-color: white;
+    overflow:scroll;
+
+}
+
+.cm,.wf,.edi {
+    margin-left: 30px;
+}
+
+.pg-l-header {
+    margin-top: 20px
+}
+
+.time input {
+    display: inline-block;
+    color: black;
+    /*background-color: white;*/
+    margin-right: 20px;
+}
+
+ul {
+    display: none;
+}
+.left-data-disply {
+    display: block;
+}
+
+#fw1,#fw2,#fw3,ul {
+    cursor: pointer;
+}

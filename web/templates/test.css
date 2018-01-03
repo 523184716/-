@@ -1,0 +1,41 @@
+.img {
+    width: 40px;
+    height: auto;
+    margin-top: -10px;
+}
+
+.pghead {
+    margin-left: 200px;
+}
+
+.lengc-text {
+    font-size: 30px;
+}
+@media(max-width: 120px) {
+    .lengc-text {
+        font-size: 25px;
+    }
+}
+
+@media(max-width: 992px) {
+    .lengc-text {
+        font-size: 18px;
+    }
+}
+
+@media(max-width: 768px) {
+    .lengc-text {
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 400px) {
+    .lengc-text {
+        font-size: 10px;
+    }
+}
+
+.uploadfile {
+    margin-top: -5px;
+    margin-left: -20px;
+}
